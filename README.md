@@ -2,10 +2,10 @@
   <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
 </p>
 <p align="center">
-    <h1 align="center">Ithamar Kaplan's Bagrut Project - Python encryption using a Flask website</h1>
+    <h1 align="center">Ithamar Kaplan's Bagrut Project</h1>
 </p>
 <p align="center">
-    <em><code>► INSERT-TEXT-HERE</code></em>
+    <em><code>► Python encryption using a Flask website</code></em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/ithamarkap/python-encryption-bagrut?style=flat&color=0080ff" alt="license">
