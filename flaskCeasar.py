@@ -45,5 +45,5 @@ def handle_404(e):
     # handle all other routes here
     return render_template('form.html')
  
-app.run(host='0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=80)
 #'0.0.0.0'
