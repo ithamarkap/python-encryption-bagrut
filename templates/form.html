@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Ithamar's Bagrut Exercise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+        <header>
+        <h1 class="logo">Ithamar Kaplan's Amazing Online Encrypter and Decrypter!</h1>
+        </header>
+<form action="/data" method = "POST">
+        <table>
+                <tr>
+                        <td>Please enter the source text:</td>
+                        <td><input type="text" name="Phrase"></td>
+                </tr>
+                <tr>
+                        <td>Please choose the encryption step (Integer):</td>
+                        <td><input type="text" name="Step"</td>
+                </tr>
+                <tr>
+                        <td colspan="2">
+                         <div class="about">This website will encrypt with Ceasar's encryption!</div>                                            
+                        </td>
+
+                </tr>
+                <tr>
+                        <td>Direction:</td>
+                        <td>
+                                Encrypt<input type="radio" id="Encrypt" name="Op" value="Encrypt" checked>
+                                <br>
+                                Decrypt<input type="radio" id="Decrypt" name="Op" value="Decrypt">
+                        </td>
+                </tr>
+         </table>
+        <p><input type ="submit" value ="GO!" /></p>
+
+</form>
+<br><br><br>
+<form action="/atbash" method = "POST">
+        <table>
+                <tr>
+                        <td>Please enter the source text:</td>
+                        <td><input type="text" name="Phrase"></td>
+                </tr>
+                <tr>
+                        <td colspan="2">
+                         <div class="about">This website will encrypt/decrypt with Atbash encryption!</div>                                           
+                        </td>
+                </tr>
+         </table>
+        <p><input type ="submit" value ="GO!" /></p>
+</form>
+</body>
+</html>
