@@ -30,6 +30,6 @@ def ceasarDecrypt(message, key):
             decrypted_message += new_character
         else:
             decrypted_message += c
-    return decrypted_message    
+    return decrypted_message
 
 # def atbashEncrypt(message)
