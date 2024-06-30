@@ -7,10 +7,6 @@
 <p align="center">
     <em><code>► Caesar, Rail Fence and AES encryption using Python and a Flask website</code></em>
 </p>
-<p align="center">
-	<img src="https://img.shields.io/github/last-commit/ithamarkap/python-encryption-bagrut?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/ithamarkap/python-encryption-bagrut?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/ithamarkap/python-encryption-bagrut?style=flat&color=0080ff" alt="repo-language-count">
 <p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
