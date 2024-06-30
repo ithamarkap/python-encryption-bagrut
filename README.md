@@ -5,7 +5,7 @@
     <h1 align="center">Ithamar Kaplan's Bagrut Project</h1>
 </p>
 <p align="center">
-    <em><code>► Python encryption using a Flask website</code></em>
+    <em><code>► Caesar, Rail Fence and AES encryption using Python and a Flask website</code></em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/ithamarkap/python-encryption-bagrut?style=flat&color=0080ff" alt="license">
