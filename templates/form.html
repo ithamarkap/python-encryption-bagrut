@@ -1,54 +1,63 @@
 <html>
-<head>
+  <head>
     <title>Ithamar's Bagrut Exercise</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-</head>
-<body>
-        <header>
-        <h1 class="logo">Ithamar Kaplan's Amazing Online Encrypter and Decrypter!</h1>
-        </header>
-<form action="/data" method = "POST">
-        <table>
-                <tr>
-                        <td>Please enter the source text:</td>
-                        <td><input type="text" name="Phrase"></td>
-                </tr>
-                <tr>
-                        <td>Please choose the encryption step (Integer):</td>
-                        <td><input type="text" name="Step"></td>
-                </tr>
-                <tr>
-                        <td colspan="2">
-                         <div class="about">This website will encrypt with Ceasar's encryption!</div>                                            
-                        </td>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <h1 class="logo">
+      Ithamar Kaplan's Amazing Online Encrypter and Decrypter!
+    </h1>
 
-                </tr>
-                <tr>
-                        <td>Direction:</td>
-                        <td>
-                                Encrypt<input type="radio" id="Encrypt" name="Op" value="Encrypt" checked>
-                                <br>
-                                Decrypt<input type="radio" id="Decrypt" name="Op" value="Decrypt">
-                        </td>
-                </tr>
-         </table>
-        <p><input type ="submit" value ="GO!" /></p>
+    <div class="container">
+      <h2>Caesar's Encryption</h2>
+      <form id="caesar-form"action="/caesar" method="POST">
+        <label for="caesar-text">Please enter the source text:</label>
+        <textarea id="caesar-text" name="text" required></textarea>
 
-</form>
-<br><br><br>
-<form action="/zigzag" method = "POST">
-        <table>
-                <tr>
-                        <td>Please enter the source text:</td>
-                        <td><input type="text" name="Phrase"></td>
-                </tr>
-                <tr>
-                        <td colspan="2">
-                         <div class="about">This will encrypt/decrypt with the Rail Fence (zigzag) encryption!</div>                                           
-                        </td>
-                </tr>
-         </table>
-        <p><input type ="submit" value ="GO!" /></p>
-</form>
-</body>
+        <label for="caesar-step"
+          >Please choose the encryption step (Integer):</label
+        >
+        <input type="number" id="caesar-step" name="step" required />
+
+        <div class="about">
+          This website will encrypt with Caesar's encryption!
+        </div>
+
+        <label for="caesar-direction">Direction:</label>
+        <select id="caesar-direction" name="direction">
+          <option value="encrypt">Encrypt</option>
+          <option value="decrypt">Decrypt</option>
+        </select>
+
+        <button type="submit">Process</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Rail Fence Encryption</h2>
+      <form id="rail-fence-form" action="/zigzag" method="POST">
+        <label for="rail-fence-text">Please enter the source text:</label>
+        <textarea
+          id="rail-fence-text"
+          name="text"
+          required
+        ></textarea>
+
+        <div class="about">
+          This will encrypt/decrypt with the Rail Fence (zigzag) encryption!
+        </div>
+
+        <label name="direction">Direction:</label>
+        <select id="rail-fence-direction" name="rail-fence-direction">
+          <option value="encrypt">Encrypt</option>
+          <option value="decrypt">Decrypt</option>
+        </select>
+
+        <button type="submit">Process</button>
+      </form>
+    </div>
+  </body>
 </html>

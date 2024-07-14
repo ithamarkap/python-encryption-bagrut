@@ -116,7 +116,7 @@ cd python-encryption-bagrut
 3. Install the dependencies:
 
 ```sh
-> INSERT-INSTALL-COMMANDS
+> pip install flask
 ```
 
 ###  Running `python-encryption-bagrut`

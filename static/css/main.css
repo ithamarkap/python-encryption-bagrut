@@ -1,76 +1,91 @@
+/* Global styles */
 body {
-  margin: 10;
-  padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000000;
-}
-/*
- * Formatting the header area
- */
-header {
-  background-color: #DFB887;
-  height: 35px;
-  width: 100%;
-  opacity: .9;
-  margin-bottom: 10px;
-}
-header h1.logo {
-  margin: 0;
-  font-size: 1.7em;
-  color: #000000;
-  text-transform: uppercase;
-  float: left;
-}
-header h1.logo:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-/*
- * Centering the body content
- */
-.container {
-  width: 1200px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
-div.home {
-  padding: 10px 0 30px 0;
-  background-color: #E6E6FA;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
-div.about {
-  padding: 10px 0 30px 0;
-  background-color: #E6E6FA;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-}
-h2 {
-  font-size: 3em;
-  margin-top: 40px;
+
+h1.logo {
   text-align: center;
-  letter-spacing: -2px;
+  color: #2c3e50;
+  margin-bottom: 30px;
 }
-h3 {
-  font-size: 1.7em;
-  font-weight: 100;
-  margin-top: 30px;
-  text-align: center;
-  letter-spacing: -1px;
-  color: #999;
+
+/* Form styles */
+form {
+  display: grid;
+  gap: 15px;
 }
-.menu {
-  float: right;
-  margin-top: 8px;
+
+label {
+  font-weight: bold;
 }
-.menu li {
-  display: inline;
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.menu li + li {
-  margin-left: 35px;
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
 }
-.menu li a {
-  color: #444;
-  text-decoration: none;
+
+.about {
+  background-color: #e7f3fe;
+  border-left: 5px solid #2196f3;
+  padding: 10px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.about.result {
+  /* yellow */
+  background-color: #ffe4c4;
+  border-left: 5px solid #ffa33b;
+}
+
+/* Button styles */
+button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d8bf2;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
 }

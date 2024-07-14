@@ -1,6 +1,8 @@
 import string
 
-# functions
+#* ---------------------------------------------------------------------------- #
+#*                            Cipher Algorithms                             #
+#* ---------------------------------------------------------------------------- #
 
 def ceasarEncrypt(message, key):
     alphabet = string.ascii_lowercase # The letters "abcdefghijklmnopqrstuvwxyz"
@@ -32,4 +34,29 @@ def ceasarDecrypt(message, key):
             decrypted_message += c
     return decrypted_message
 
-# def atbashEncrypt(message)
+# TODO: implement Atbash
+def atbashEncrypt(message):
+    return message[::-1]
+
+
+#* ---------------------------------------------------------------------------- #
+#*                            Form Data Manipulation                            #
+#* ---------------------------------------------------------------------------- #
+
+
+def retrieveFormData(form_data: dict):
+    text: string = form_data["text"].lower()
+    step: int = form_data["step"]
+    direction: string = form_data["direction"]
+
+    if(type(step) != int):
+        try:
+            step = int(step)
+        except ValueError:
+            raise Exception("Step must be an integer")
+
+    if(direction != "encrypt" and direction != "decrypt"):
+        # throw an error
+        raise Exception("Developer error: direction must be 'encrypt' or 'decrypt'")
+
+    return text, step, direction
