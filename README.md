@@ -71,21 +71,21 @@
 
 ##  Modules
 
-<details closed><summary>.</summary>
+<details closed><summary>Python (Routes & Cipher algorithms)</summary>
 
-| File                                                                                                | Summary                         |
-| ---                                                                                                 | ---                             |
-| [function.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/function.py)       | <code>► INSERT-TEXT-HERE</code> |
-| [flaskCeasar.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/flaskCeasar.py) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                 | Summary                            |
+| ---                                                                                                  | ---                                |
+| [function.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/function.py)        | <code>► Algorithms & Tools</code>  |
+| [flaskCeasar.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/Server-Start.py) | <code>► Main Application</code>    |
 
 </details>
 
-<details closed><summary>templates</summary>
+<details closed><summary>Website (HTML, CSS)</summary>
 
-| File                                                                                                | Summary                         |
-| ---                                                                                                 | ---                             |
-| [form.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/form.html) | <code>► INSERT-TEXT-HERE</code> |
-| [data.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/data.html) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                | Summary                            |
+| ---                                                                                                 | ---                                |
+| [form.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/form.html) | <code>► Input details</code>       |
+| [data.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/data.html) | <code>► Algorithm result</code>    |
 
 </details>
 
@@ -97,7 +97,7 @@
 
 Ensure you have the following dependencies installed on your system:
 
-* **HTML**: `version x.y.z`
+* **Flask**: `any version`
 
 ###  Installation
 
@@ -124,31 +124,5 @@ cd python-encryption-bagrut
 Use the following command to run python-encryption-bagrut:
 
 ```sh
-> INSERT-RUN-COMMANDS
+> python3 Server-Start.py
 ```
-
-###  Tests
-
-Use the following command to run tests:
-
-```sh
-> INSERT-TEST-COMMANDS
-```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
-[**Return**](#-quick-links)
-
----
