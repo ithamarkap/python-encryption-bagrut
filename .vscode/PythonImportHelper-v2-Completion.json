@@ -1,0 +1,124 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "function",
+        "description": "function",
+        "isExtraImport": true,
+        "detail": "function",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "form",
+        "kind": 2,
+        "importPath": "Server-Start",
+        "description": "Server-Start",
+        "peekOfCode": "def form():\n    return render_template('form.html')\n@app.route('/caesar', methods = ['POST', 'GET'])\ndef caesar():\n    try:\n        # retrieve the form data (with retrieveFormData)\n        text, step, direction = retrieveFormData(request.form)\n        # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form\n        if request.method == 'GET':\n            return \"<h1>The URL /caesar was accessed directly. Try going to <a href=\\\"/form\\\">/form</a> to submit data</h1>\"",
+        "detail": "Server-Start",
+        "documentation": {}
+    },
+    {
+        "label": "caesar",
+        "kind": 2,
+        "importPath": "Server-Start",
+        "description": "Server-Start",
+        "peekOfCode": "def caesar():\n    try:\n        # retrieve the form data (with retrieveFormData)\n        text, step, direction = retrieveFormData(request.form)\n        # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form\n        if request.method == 'GET':\n            return \"<h1>The URL /caesar was accessed directly. Try going to <a href=\\\"/form\\\">/form</a> to submit data</h1>\"\n        if request.method == 'POST':\n            if direction == \"encrypt\":\n                encrypted_message = ceasarEncrypt(text,step)",
+        "detail": "Server-Start",
+        "documentation": {}
+    },
+    {
+        "label": "atbash",
+        "kind": 2,
+        "importPath": "Server-Start",
+        "description": "Server-Start",
+        "peekOfCode": "def atbash():\n    # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form\n    if request.method == 'GET':\n        return \"<h1>The URL /atbash was accessed directly. Try going to <a href=\\\"/form\\\">/form</a> to submit data</h1>\"\n    if request.method == 'POST':\n        form_data = request.form\n        text=(form_data['Phrase'].lower())\n        encrypted_message = atbashEncrypt(text)\n        return render_template('data.html',result=encrypted_message)\n# TODO: HTML & Route handling for \"/zigzag\"",
+        "detail": "Server-Start",
+        "documentation": {}
+    },
+    {
+        "label": "handle_404",
+        "kind": 2,
+        "importPath": "Server-Start",
+        "description": "Server-Start",
+        "peekOfCode": "def handle_404(e):\n    # handle all other routes here\n    return render_template('form.html')\napp.run(host='0.0.0.0', port=80)",
+        "detail": "Server-Start",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Server-Start",
+        "description": "Server-Start",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/form')\ndef form():\n    return render_template('form.html')\n@app.route('/caesar', methods = ['POST', 'GET'])\ndef caesar():\n    try:\n        # retrieve the form data (with retrieveFormData)\n        text, step, direction = retrieveFormData(request.form)\n        # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form",
+        "detail": "Server-Start",
+        "documentation": {}
+    },
+    {
+        "label": "ceasarEncrypt",
+        "kind": 2,
+        "importPath": "function",
+        "description": "function",
+        "peekOfCode": "def ceasarEncrypt(message, key):\n    alphabet = string.ascii_lowercase # The letters \"abcdefghijklmnopqrstuvwxyz\"\n    encrypted_message = \"\"\n    for c in message:\n        if c in alphabet:\n            position = alphabet.find(c)\n            new_position = (position + key) % 26\n            new_character = alphabet[new_position]\n            encrypted_message += new_character\n        else:",
+        "detail": "function",
+        "documentation": {}
+    },
+    {
+        "label": "ceasarDecrypt",
+        "kind": 2,
+        "importPath": "function",
+        "description": "function",
+        "peekOfCode": "def ceasarDecrypt(message, key):\n    alphabet = string.ascii_lowercase # The letters \"abcdefghijklmnopqrstuvwxyz\"\n    decrypted_message = \"\"\n    for c in message:\n        if c in alphabet:\n            position = alphabet.find(c)\n            new_position = (position - key) % 26\n            new_character = alphabet[new_position]\n            decrypted_message += new_character\n        else:",
+        "detail": "function",
+        "documentation": {}
+    },
+    {
+        "label": "atbashEncrypt",
+        "kind": 2,
+        "importPath": "function",
+        "description": "function",
+        "peekOfCode": "def atbashEncrypt(message):\n    return message[::-1]\n#* ---------------------------------------------------------------------------- #\n#*                            Form Data Manipulation                            #\n#* ---------------------------------------------------------------------------- #\ndef retrieveFormData(form_data: dict):\n    text: string = form_data[\"text\"].lower()\n    step: int = form_data[\"step\"]\n    direction: string = form_data[\"direction\"]\n    if(type(step) != int):",
+        "detail": "function",
+        "documentation": {}
+    },
+    {
+        "label": "retrieveFormData",
+        "kind": 2,
+        "importPath": "function",
+        "description": "function",
+        "peekOfCode": "def retrieveFormData(form_data: dict):\n    text: string = form_data[\"text\"].lower()\n    step: int = form_data[\"step\"]\n    direction: string = form_data[\"direction\"]\n    if(type(step) != int):\n        try:\n            step = int(step)\n        except ValueError:\n            raise Exception(\"Step must be an integer\")\n    if(direction != \"encrypt\" and direction != \"decrypt\"):",
+        "detail": "function",
+        "documentation": {}
+    }
+]
