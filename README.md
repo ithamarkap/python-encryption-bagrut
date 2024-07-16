@@ -101,14 +101,7 @@ Ensure you have the following dependencies installed on your system:
 
 ###  Installation
 
-1. Clone the python-encryption-bagrut repository:
-
-```sh
-git clone https://github.com/ithamarkap/python-encryption-bagrut
-```
-```sh
-Or download and extract the zip file
-```
+1. Clone the python-encryption-bagrut repository or download and extract the zip file
 
 2. Change to the project directory:
 
