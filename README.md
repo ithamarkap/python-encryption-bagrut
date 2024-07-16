@@ -97,7 +97,7 @@
 
 Ensure you have the following dependencies installed on your system:
 
-* **HTML**: `version x.y.z`
+* **Python**: `version 3.x.x` Use the install instructions on their website
 
 ###  Installation
 
@@ -106,6 +106,9 @@ Ensure you have the following dependencies installed on your system:
 ```sh
 git clone https://github.com/ithamarkap/python-encryption-bagrut
 ```
+```sh
+Or download and extract the zip file
+```
 
 2. Change to the project directory:
 
@@ -113,10 +116,10 @@ git clone https://github.com/ithamarkap/python-encryption-bagrut
 cd python-encryption-bagrut
 ```
 
-3. Install the dependencies:
+3. Activate the virtual environment:
 
 ```sh
-> INSERT-INSTALL-COMMANDS
+> python3 -m venv .flaskenv
 ```
 
 ###  Running `python-encryption-bagrut`
@@ -124,7 +127,7 @@ cd python-encryption-bagrut
 Use the following command to run python-encryption-bagrut:
 
 ```sh
-> INSERT-RUN-COMMANDS
+> python3 Server-Start.py
 ```
 
 ###  Tests
