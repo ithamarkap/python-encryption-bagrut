@@ -112,7 +112,7 @@ cd python-encryption-bagrut
 3. Activate the virtual environment:
 
 ```sh
-> . .flaskenv/bin/activate
+. .flaskenv/bin/activate
 ```
 
 ###  Running `python-encryption-bagrut`
@@ -120,7 +120,7 @@ cd python-encryption-bagrut
 Use the following command to run python-encryption-bagrut:
 
 ```sh
-> python3 Server-Start.py
+python3 Server-Start.py
 ```
 
 ###  Tests
