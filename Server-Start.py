@@ -32,20 +32,44 @@ def caesar():
     except Exception as e:
         return "<h1>Error: " + str(e) + "</h1>"
 
-# TODO: HTML for this route
-@app.route('/atbash', methods = ['POST', 'GET'])
-def atbash():
+@app.route('/aes', methods = ['POST', 'GET'])
+def aes():
     # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form
     if request.method == 'GET':
-        return "<h1>The URL /atbash was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
+        return "<h1>The URL /aes was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
     if request.method == 'POST':
         form_data = request.form
-        text=(form_data['Phrase'].lower())
-        
-        encrypted_message = atbashEncrypt(text)
-        return render_template('data.html',result=encrypted_message)
+        text = form_data["text"]
+        direction = form_data["direction"]
+        if direction == "encrypt":
+            encrypted_message = aesEncrypt(text)
+            return render_template('data.html',result=encrypted_message)
+        else:
+            decrypted_message = aesDecrypt(text)
+            return render_template('data.html',result=decrypted_message)
     
-# TODO: HTML & Route handling for "/zigzag"
+@app.route('/zigzag', methods = ['POST', 'GET'])
+def zigzag():
+    try:
+        # retrieve the form data (with retrieveFormData)
+        text, step, direction = retrieveFormData(request.form)
+
+        # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form
+        if request.method == 'GET':
+            return "<h1>The URL /zigzag was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
+        if request.method == 'POST':
+            if step == "":
+                decrypted_message = zigzagBruteforce(text)
+                return render_template('data.html',result=decrypted_message)
+            else:
+                if direction == "encrypt":
+                    encrypted_message = zigzagEncrypt(text,step)
+                    return render_template('data.html',result=encrypted_message)
+                elif direction == "decrypt":
+                    decrypted_message = zigzagDecrypt(text,step)
+                    return render_template('data.html',result=decrypted_message)
+    except Exception as e:
+        return "<h1>Error: " + str(e) + "</h1>"    
     
 @app.errorhandler(404)
 def handle_404(e):

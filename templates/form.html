@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Ithamar's Bagrut Exercise</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
@@ -20,14 +21,34 @@
 
         <label for="caesar-direction">Direction:</label>
         <select id="caesar-direction" name="direction">
-          <option value="decrypt">Decrypt</option>
           <option value="encrypt">Encrypt</option>
+          <option value="decrypt">Decrypt</option>
         </select>
 
         <label for="caesar-step"
           >Please choose the encryption step (Integer), or leave blank for bruteforce (all possible options):</label
         >
         <input type="number" id="caesar-step" name="step"/>  
+
+        <button type="submit">Process</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>AES Encryption</h2>
+      <form id="AES-form" action="/aes" method="POST">
+        <label for="aes-text">Please enter the source text:</label>
+        <textarea
+          id="aes-text"
+          name="text"
+          required
+        ></textarea>
+
+        <label name="direction">Direction:</label>
+        <select id="direction" name="direction">
+          <option value="encrypt">Encrypt</option>
+          <option value="decrypt">Decrypt</option>
+        </select>
 
         <button type="submit">Process</button>
       </form>
@@ -43,12 +64,8 @@
           required
         ></textarea>
 
-        <div class="about">
-          This will encrypt/decrypt with the Rail Fence (zigzag) encryption!
-        </div>
-
         <label name="direction">Direction:</label>
-        <select id="rail-fence-direction" name="rail-fence-direction">
+        <select id="direction" name="direction">
           <option value="encrypt">Encrypt</option>
           <option value="decrypt">Decrypt</option>
         </select>
@@ -56,5 +73,17 @@
         <button type="submit">Process</button>
       </form>
     </div>
+    
+    <button id="feedbackButton">Give Feedback</button>
+
+    <div id="feedbackPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Feedback</h2>
+            <textarea id="feedbackText" placeholder="Enter your feedback here..."></textarea>
+            <button id="submitFeedback">Submit</button>
+        </div>
+    </div>
+
   </body>
 </html>
