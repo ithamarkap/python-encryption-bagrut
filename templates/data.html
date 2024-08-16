@@ -7,6 +7,6 @@
 </header>
 <p> ... </p>
 <p> The resulting  message: </p>
-<div class="about result">  {{result}} </div>
+<div class="about result">  {% autoescape false %}{{result}}{% endautoescape %} </div>
 <p> ... </p>
 <a href="/">Start again</a>

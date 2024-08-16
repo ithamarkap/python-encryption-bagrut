@@ -19,12 +19,16 @@ def caesar():
         if request.method == 'GET':
             return "<h1>The URL /caesar was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
         if request.method == 'POST':
-            if direction == "encrypt":
-                encrypted_message = ceasarEncrypt(text,step)
-                return render_template('data.html',result=encrypted_message)
-            else:
-                decrypted_message = ceasarDecrypt(text,step)
+            if step == "":
+                decrypted_message = ceasarBruteforce(text)
                 return render_template('data.html',result=decrypted_message)
+            else:
+                if direction == "encrypt":
+                    encrypted_message = ceasarEncrypt(text,step)
+                    return render_template('data.html',result=encrypted_message)
+                elif direction == "decrypt":
+                    decrypted_message = ceasarDecrypt(text,step)
+                    return render_template('data.html',result=decrypted_message)
     except Exception as e:
         return "<h1>Error: " + str(e) + "</h1>"
 
