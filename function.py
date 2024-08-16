@@ -124,50 +124,101 @@ def aesDecrypt(message):
     return message.decode()
 
 def zigzagEncrypt(message, key):
-    alphabet = string.ascii_lowercase # The letters "abcdefghijklmnopqrstuvwxyz"
-    encrypted_message = ""
+    message = str(message)
+    key = int(key)
+    if(key < 2):
+        # throw an error
+        raise Exception("Rail fence encryption doesn't support less than 2 rows. <br> <a href='/'>Go Back</a>")
+    # Create a matrix to store the rail fence pattern
+    rail = [['\n' for _ in range(len(message))] for _ in range(key)]
 
-    for c in message:
+    # Initialize variables to determine the direction of movement
+    direction_down = False
+    row, col = 0, 0
 
-        if c in alphabet:
-            position = alphabet.find(c)
-            new_position = (position + int(key)) % 26
-            new_character = alphabet[new_position]
-            encrypted_message += new_character
-        else:
-            encrypted_message += c
-    return encrypted_message
+    # Fill the rail matrix with the characters of the message
+    for char in message:
+        # Change direction when reaching the top or bottom rail
+        if row == 0 or row == key - 1:
+            direction_down = not direction_down
+
+        # Place the character in the rail matrix
+        rail[row][col] = char
+        col += 1
+
+        # Move to the next row
+        row += 1 if direction_down else -1
+
+    # Construct the encrypted text by reading the matrix row by row
+    encrypted_text = []
+    for i in range(key):
+        for j in range(len(message)):
+            if rail[i][j] != '\n':
+                encrypted_text.append(rail[i][j])
+
+    return ''.join(encrypted_text)
 
 def zigzagDecrypt(message, key):
-    alphabet = string.ascii_lowercase # The letters "abcdefghijklmnopqrstuvwxyz"
-    decrypted_message = ""
+    message = str(message)
+    key = int(key)
+    if(key < 2):
+        # throw an error
+        raise Exception("Rail fence encryption doesn't support less than 2 rows. <br> <a href='/'>Go Back</a>")
+    # Create a matrix to store the rail fence pattern
+    rail = [['\n' for _ in range(len(message))] for _ in range(key)]
 
-    for c in message:
+    # Initialize variables to determine the direction of movement
+    direction_down = None
+    row, col = 0, 0
 
-        if c in alphabet:
-            position = alphabet.find(c)
-            new_position = (position - int(key)) % 26
-            new_character = alphabet[new_position]
-            decrypted_message += new_character
-        else:
-            decrypted_message += c
-    return decrypted_message
+    # Mark the positions in the matrix where the characters will be placed
+    for i in range(len(message)):
+        if row == 0:
+            direction_down = True
+        if row == key - 1:
+            direction_down = False
+
+        # Place a marker in the rail matrix
+        rail[row][col] = '*'
+        col += 1
+
+        # Move to the next row
+        row += 1 if direction_down else -1
+
+    # Fill the rail matrix with the characters of the message
+    index = 0
+    for i in range(key):
+        for j in range(len(message)):
+            if rail[i][j] == '*' and index < len(message):
+                rail[i][j] = message[index]
+                index += 1
+
+    # Read the matrix in a zigzag manner to construct the decrypted text
+    result = []
+    row, col = 0, 0
+    for i in range(len(message)):
+        if row == 0:
+            direction_down = True
+        if row == key - 1:
+            direction_down = False
+
+        # Collect the characters from the rail matrix
+        if rail[row][col] != '*':
+            result.append(rail[row][col])
+            col += 1
+
+        # Move to the next row
+        row += 1 if direction_down else -1
+
+    return ''.join(result)
 
 def zigzagBruteforce(message):
-    alphabet = string.ascii_lowercase # The letters "abcdefghijklmnopqrstuvwxyz"
-    decrypted_message = ""
+    possible_plaintexts = {}
+    for key in range(2, len(message) + 1):
+        decrypted_text = zigzagDecrypt(message, key)
+        possible_plaintexts[key] = decrypted_text
 
-    for i in range (1,26):
-        for c in message:
-            if c in alphabet:
-                position = alphabet.find(c)
-                new_position = (position - i) % 26
-                new_character = alphabet[new_position]
-                decrypted_message += new_character
-            else:
-                decrypted_message += c
-        decrypted_message += "<br>"
-    return decrypted_message
+    return possible_plaintexts
 
 #* ---------------------------------------------------------------------------- #
 #*                            Form Data Manipulation                            #
