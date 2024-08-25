@@ -113,7 +113,7 @@ cd python-encryption-bagrut
 
 ```sh
 pip install cryptography
-. .flask2/bin/activate
+.\flask2\Scripts\activate
 ```
 
 ###  Running `python-encryption-bagrut`
