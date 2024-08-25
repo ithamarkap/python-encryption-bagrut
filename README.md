@@ -47,9 +47,11 @@
 ##  Features
 
 <details closed><summary>Caesar</summary>
-* Encryption, supplying an integer numerical key
-* Decryption, supplying an integer numerical key
-* Encryption/Decryption, without supplying a key - displaying all possible 25 options
+<ul>
+  <li>Encryption, supplying an integer numerical key</li>
+  <li>Decryption, supplying an integer numerical key</li>
+  <li>Encryption/Decryption, without supplying a key - displaying all possible 25 options</li>
+</ul>
 </details>
 <details closed><summary>Rail Fence (Zigzag)</summary>
 * Encryption, supplying an integer numerical key
