@@ -40,13 +40,25 @@
 
 ##  Overview
 
-<code>► INSERT-TEXT-HERE</code>
+<code>► A demo project written in Python 3.12 to demonstrate encryption and decryption of English text with 3 algorithems: Caesar, Rail Fence (Zigzag) and AES. If you don't supply an encryption key for Caesar or Rail Fence, all possible options will be displayed as bruteforce encryption/decryption. The code is exposed as a webpage through Flask framework.</code>
 
 ---
 
 ##  Features
 
-<code>► INSERT-TEXT-HERE</code>
+<details closed><summary>Caesar</summary>
+* Encryption, supplying an integer numerical key
+* Decryption, supplying an integer numerical key
+* Encryption/Decryption, without supplying a key - displaying all possible 25 options
+</details>
+<details closed><summary>Rail Fence (Zigzag)</summary>
+* Encryption, supplying an integer numerical key
+* Decryption, supplying an integer numerical key
+* Encryption/Decryption, without supplying a key - displaying all possible 25 options
+</details><details closed><summary>AES</summary>
+* Encryption, using a random key and pre-generated password
+* Decryption, extracting the key from the message using the pre-generated password
+</details>
 
 ---
 
@@ -78,12 +90,11 @@
 | File                                                                                                | Summary                         |
 | ---                                                                                                 | ---                             |
 | [function.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/function.py)       | <code>► Main file that holds all the encryption/decryption functions</code> |
-| [flaskCeasar.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/flaskCeasar.py) | <code>► Flask container that handles HTTP requests and distributes them to functions in function.py</code> |
+| [Server-Start.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/Server-Start.py) | <code>► Flask container that handles HTTP requests and distributes them to functions in function.py</code> |
 
 </details>
 
-<details closed><summary>templates</summary>
-
+<details closed><summary>Templates</summary>
 | File                                                                                                | Summary                         |
 | ---                                                                                                 | ---                             |
 | [form.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/form.html) | <code>► Input form</code> |
