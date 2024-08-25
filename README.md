@@ -89,6 +89,11 @@
 ```
 
 ---
+##  Code flow diagram
+
+[![code-flow.png](https://i.postimg.cc/7ZXXbqKr/code-flow.png)](https://postimg.cc/PCp1RnGS)
+
+---
 
 ##  Modules
 
