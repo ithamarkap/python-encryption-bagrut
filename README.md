@@ -57,11 +57,13 @@
     ├── README.md
     ├── __pycache__
     │   └── function.cpython-311.pyc
-    ├── flaskCeasar.py
+    ├── Server-Start.py
     ├── function.py
     ├── static
     │   └── css
     │       └── main.css
+    │   └── js
+    │       └── script.js
     └── templates
         ├── data.html
         └── form.html
@@ -71,12 +73,12 @@
 
 ##  Modules
 
-<details closed><summary>.</summary>
+<details closed><summary>Code Elements</summary>
 
 | File                                                                                                | Summary                         |
 | ---                                                                                                 | ---                             |
-| [function.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/function.py)       | <code>► INSERT-TEXT-HERE</code> |
-| [flaskCeasar.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/flaskCeasar.py) | <code>► INSERT-TEXT-HERE</code> |
+| [function.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/function.py)       | <code>► Main file that holds all the encryption/decryption functions</code> |
+| [flaskCeasar.py](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/flaskCeasar.py) | <code>► Flask container that handles HTTP requests and distributes them to functions in function.py</code> |
 
 </details>
 
@@ -84,8 +86,8 @@
 
 | File                                                                                                | Summary                         |
 | ---                                                                                                 | ---                             |
-| [form.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/form.html) | <code>► INSERT-TEXT-HERE</code> |
-| [data.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/data.html) | <code>► INSERT-TEXT-HERE</code> |
+| [form.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/form.html) | <code>► Input form</code> |
+| [data.html](https://github.com/ithamarkap/python-encryption-bagrut/blob/master/templates/data.html) | <code>► Result output</code> |
 
 </details>
 

@@ -12,13 +12,12 @@ def form():
 @app.route('/caesar', methods = ['POST', 'GET'])
 def caesar():
     try:
-        # retrieve the form data (with retrieveFormData)
-        text, step, direction = retrieveFormData(request.form)
-
         # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form
         if request.method == 'GET':
             return "<h1>The URL /caesar was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
         if request.method == 'POST':
+            # retrieve the form data (with retrieveFormData)
+            text, step, direction = retrieveFormData(request.form)
             if step == "":
                 decrypted_message = ceasarBruteforce(text)
                 return render_template('data.html',result=decrypted_message)
@@ -51,13 +50,12 @@ def aes():
 @app.route('/zigzag', methods = ['POST', 'GET'])
 def zigzag():
     try:
-        # retrieve the form data (with retrieveFormData)
-        text, step, direction = retrieveFormData(request.form)
-
         # If this code was reached with a GET HTTP method, there's no data to work on, so redirect to /form
         if request.method == 'GET':
             return "<h1>The URL /zigzag was accessed directly. Try going to <a href=\"/form\">/form</a> to submit data</h1>"
         if request.method == 'POST':
+            # retrieve the form data (with retrieveFormData)
+            text, step, direction = retrieveFormData(request.form)
             if step == "":
                 decrypted_message = zigzagBruteforce(text)
                 return render_template('data.html',result=decrypted_message)
