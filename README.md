@@ -114,7 +114,8 @@ cd python-encryption-bagrut
 3. Activate the virtual environment:
 
 ```sh
-. .flaskenv/bin/activate
+pip install cryptography
+.\flask2\Scripts\activate
 ```
 
 ###  Running `python-encryption-bagrut`
