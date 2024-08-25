@@ -54,12 +54,17 @@
 </ul>
 </details>
 <details closed><summary>Rail Fence (Zigzag)</summary>
-* Encryption, supplying an integer numerical key
-* Decryption, supplying an integer numerical key
-* Encryption/Decryption, without supplying a key - displaying all possible 25 options
-</details><details closed><summary>AES</summary>
-* Encryption, using a random key and pre-generated password
-* Decryption, extracting the key from the message using the pre-generated password
+<ul>
+  <li>Encryption, supplying an integer numerical key</li>
+  <li>Decryption, supplying an integer numerical key</li>
+  <li>Encryption/Decryption, without supplying a key - displaying all possible 25 options</li>
+</ul>
+</details>
+<details closed><summary>AES</summary>
+<ul>
+  <li>Encryption, using a random key and pre-generated password</li>
+  <li>Decryption, extracting the key from the message using the pre-generated password</li>
+</ul>
 </details>
 
 ---
