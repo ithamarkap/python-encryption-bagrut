@@ -40,7 +40,7 @@
 
 ##  Overview
 
-<code>► A demo project written in Python 3.12 to demonstrate encryption and decryption of English text with 3 algorithems: Caesar, Rail Fence (Zigzag) and AES. If you don't supply an encryption key for Caesar or Rail Fence, all possible options will be displayed as bruteforce encryption/decryption. The code is exposed as a webpage through Flask framework.</code>
+A demo project written in Python 3.12 to demonstrate encryption and decryption of English text with 3 algorithems: Caesar, Rail Fence (Zigzag) and AES. If you don't supply an encryption key for Caesar or Rail Fence, all possible options will be displayed as bruteforce encryption/decryption. The code is exposed as a webpage through Flask framework.
 
 ---
 
