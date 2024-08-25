@@ -129,11 +129,11 @@ Ensure you have the following dependencies installed on your system:
 cd python-encryption-bagrut
 ```
 
-3. Activate the virtual environment:
+3. Activate the virtual environment and install the cryptography package:
 
 ```sh
-pip install cryptography
 .\flask2\Scripts\activate
+pip install cryptography
 ```
 
 ###  Running `python-encryption-bagrut`
@@ -141,30 +141,25 @@ pip install cryptography
 Use the following command to run python-encryption-bagrut:
 
 ```sh
-python3 Server-Start.py
+python Server-Start.py
 ```
 
-###  Tests
-
-Use the following command to run tests:
+###  Accessing the user interface
+You'll see the following lines confirming Flask is up:
 
 ```sh
-> INSERT-TEST-COMMANDS
+ * Serving Flask app 'Server-Start'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://xxx.xxx.xxx.xxx:80
 ```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
+Open your web browser and navigate to `http://localhost:80`
 
 ##  Acknowledgments
 
-- List any resources, contributors, inspiration, etc. here.
+- Thanks to @Lev-Shapiro for great design and UI contributions.
 
 [**Return**](#-quick-links)
 
