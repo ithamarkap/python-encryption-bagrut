@@ -165,5 +165,3 @@ Open your web browser and navigate to `http://localhost:80`
 ##  Acknowledgments
 
 - Thanks to [@Lev-Shapiro](https://github.com/Lev-Shapiro) for great design and UI contributions.
-
----
