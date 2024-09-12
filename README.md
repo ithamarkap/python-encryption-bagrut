@@ -46,7 +46,7 @@ A demo project written in Python 3.12 to demonstrate encryption and decryption o
 
 ##  Live Demo
 
-[Link to a live demo running on Google Cloud](http://ithamarbagrut.duckdns.org)
+[Link to a live demo running on Google Cloud](http://ithamarbagrut.duckdns.org:5000)
 
 ---
 
