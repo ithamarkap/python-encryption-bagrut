@@ -138,6 +138,7 @@ cd python-encryption-bagrut
 
 ```sh
 .\flask2\Scripts\activate
+pip install flask
 pip install cryptography
 ```
 
