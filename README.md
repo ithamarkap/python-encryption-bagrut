@@ -3,6 +3,7 @@
 </p>
 <p align="center">
     <h1 align="center">Ithamar Kaplan's Bagrut Project</h1>
+	<h4 align="center">My 11th grade final assignment for 5 units of Computer Science. Now archived, when submitted and graded.</h4>
 </p>
 <p align="center">
     <em><code>► Caesar, Rail Fence and AES encryption using Python and a Flask website</code></em>
